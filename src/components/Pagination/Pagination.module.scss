@@ -1,0 +1,39 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  color: $primaryColor;
+  font-weight: 500;
+  margin-top: 40px;
+
+  @include breakpoint(laptop-small) {
+    justify-content: center;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  &__buttons_list {
+    display: flex;
+    box-shadow: $boxShadow;
+  }
+
+  &__pagination_button {
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__prev_next_button {
+    width: 60px;
+  }
+  
+  &__active_button {
+    background-color: $primaryColor;
+    color: white;
+  }
+}

@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.text_align_center {
+  text-align: center;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box_shadow {
+  box-shadow: $boxShadow;
+}
+
+.width_max {
+  width: 100%;
+}
+
+.background_primary_color {
+  background: $primaryColor !important;
+}

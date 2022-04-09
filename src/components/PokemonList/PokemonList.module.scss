@@ -1,0 +1,75 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  margin-top: 30px;
+
+  @include breakpoint(phone) {
+    margin-top: 20px;
+  }
+
+  &__pokemons_list_grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 22px;
+
+    @include breakpoint(laptop-small) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include breakpoint(phone) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  &__nothing_was_found_p {
+    color: $primaryColor;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 50px;
+  }
+
+  &__top_bar {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    gap: 20px;
+
+    @include breakpoint(laptop-small) {
+      grid-template-columns: auto 1fr auto;
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px 20px;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(tablet-small) {
+      width: 100%;
+      gap: 10px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    @include breakpoint(phone) {
+      width: 100%;
+    }
+  }
+
+  &__showing_matches_p {
+    font-weight: 500;
+    margin-top: 20px;
+
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  max-width: 550px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  @include breakpoint(tablet-small) {
+    height: unset;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 30px;
+    padding: 50px 30px 80px;
+    margin: auto;
+
+    @include breakpoint(tablet-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 30px 100px;
+    }
+  }
+
+  &__main_content {
+    @include breakpoint(tablet-small) {
+      text-align: center;
+    }
+  }
+
+  &__page_title {
+    color: $primaryColor;
+    margin: 16px 0 8px;
+  }
+
+  &__go_to_home_page {
+    color: $primaryColor;
+    background-color: white;
+    box-shadow: $boxShadow;
+    font-weight: 500;
+    padding: 8px;
+    margin-top: 20px;
+  }
+
+  &__pokemon_image_container {
+    @include breakpoint(tablet-small) {
+      width: 200px;
+      margin-top: 40px;
+    }
+  }
+}

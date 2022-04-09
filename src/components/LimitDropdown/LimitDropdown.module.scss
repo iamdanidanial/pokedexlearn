@@ -1,0 +1,56 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  color: $primaryColor;
+  font-weight: 500;
+
+  @include breakpoint(laptop-small) {
+    display: none;
+  }
+
+  &__show_per_page_p {
+    margin-right: 8px;
+  }
+
+  &__selected_option_div {
+    display: flex;
+    align-items: center;
+    width: 55px;
+    height: 36px;
+    background-color: white;
+    color: $primaryColor;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px;
+  }
+
+  &__dropdown_list {
+    position: absolute;
+    box-shadow: $boxShadow;
+    user-select: none;
+    z-index: 999;
+  }
+
+  &__dropdown_option_btn {
+    width: 55px;
+    height: 36px;
+    background-color: white;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  &__dropdown_option_btn:hover {
+    background-color: $primaryColor;
+    color: white;
+  }
+
+  &__dropdown_arrow {
+    fill: $primaryColor;
+    transform: rotate(90deg) scale(0.5);
+    transition: 0.3s;
+    margin-right: -5px;
+  }
+}

@@ -1,0 +1,26 @@
+@import "styles/breakpoints.scss";
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+  padding: 70px 0 130px;
+  margin: 0 auto;
+
+  @include breakpoint(laptop) {
+    max-width: 1060px;
+    padding: 60px 25px 120px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 550px;
+    padding: 55px 25px 135px;
+  }
+
+  @include breakpoint(tablet-small) {
+    padding: 50px 20px 130px;
+  }
+
+  @include breakpoint(phone) {
+    padding: 45px 16px 120px;
+  }
+}

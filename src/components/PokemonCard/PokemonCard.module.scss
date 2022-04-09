@@ -1,0 +1,61 @@
+@import "styles/variables.scss";
+@import "styles/animations.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  position: relative;
+  box-shadow: $boxShadow;
+  min-height: 271px;
+  padding: 12px;
+
+  @include breakpoint(tablet-large) {
+    min-height: 240px;
+  }
+
+  @include breakpoint(tablet) {
+    min-height: 271px;
+  }
+
+  &__pokemon_avatar_background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $lightGray;
+    border-radius: $borderRadius;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  &__pokemon_avatar {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__pokemon_name {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 8px;
+  }
+
+  &__pokemon_types {
+    color: $primaryColor;
+    margin-top: 2px;
+  }
+
+  &__pokemon_id {
+    color: $gray;
+  }
+
+  &__error_message {
+    color: $primaryColor;
+    text-align: center;
+  }
+}
+
+.container:hover {
+  animation-name: bounce;
+  animation-duration: 0.3s;
+}

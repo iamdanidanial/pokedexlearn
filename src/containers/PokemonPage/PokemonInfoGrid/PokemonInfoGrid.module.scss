@@ -1,0 +1,31 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 16px 20px;
+  margin-top: 10px;
+
+  @include breakpoint(laptop) {
+    padding: 0;
+    margin-top: 16px;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: 48px;
+  }
+
+  @include breakpoint(phone-small) {
+    margin-top: 40px;
+  }
+
+  &__info_name_p {
+    color: $primaryColor;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+}

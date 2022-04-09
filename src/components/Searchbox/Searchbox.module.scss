@@ -1,0 +1,64 @@
+@import "styles/variables.scss";
+@import "styles/breakpoints.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 292px;
+  height: 36px;
+  box-shadow: $boxShadow;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @include breakpoint(tablet-small) {
+    grid-column-end: 2;
+  }
+
+  &__search_input {
+    width: calc(100% - 40px);
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  &__submit_button {
+    width: 40px;
+    height: 100%;
+    background-color: $primaryColor;
+    padding: 0;
+  }
+
+  &__search_icon {
+    transform: scale(0.7);
+    fill: white;
+    width: 26px;
+  }
+
+  &__autocomplete {
+    position: absolute;
+    top: 36px;
+    width: calc(100% - 40px);
+    background-color: white;
+    box-shadow: $boxShadow;
+    z-index: 999;
+  }
+
+  &__autocomplete_option {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+
+  &__autocomplete_option:hover {
+    background-color: $primaryColor;
+    color: white;
+  }
+}
